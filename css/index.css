@@ -1,0 +1,59 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    
+}
+
+.interface{
+    background-color: #f7ecde;
+    height: 100vh;
+}
+
+
+
+h1{
+    font-size: 70px;
+    font-family: "Pacifico", cursive;
+    color: #352e28;
+ font-weight: 500;
+    line-height: 1.2;
+
+
+}
+.main{
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+    border-top: 2px dotted;
+}
+
+main>h1::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 25%;
+    left: 0;
+    bottom: 10px;
+    background-color: #fec260;
+    transition: all 0.1s;
+    z-index: -1;
+}
+.bookmark button{
+    background-color: #d1512d;
+    color: white;
+}
+
+#submitBtn:hover {
+    background-color: #bb4120;
+    color: white;
+    border-color: #a03315;;
+}
+
+.btn-delete{
+    background-color: rgb(244, 134, 25);
+}
+.bookmark h2{
+    color: rgba(130, 215, 12, 0.674);
+
+}
