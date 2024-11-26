@@ -36,7 +36,6 @@ function addBookMark() {
   if(httpsRegex.test(userURL)==true && nameRegex.test(userSiteName)==true){
 
 
-//window.alert("it is repeated bookmark , enter a new book mark")
     
 
  
