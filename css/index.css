@@ -18,8 +18,15 @@ h1{
     color: #352e28;
  font-weight: 500;
     line-height: 1.2;
+    position: relative;
+    transition: all 0.5s;
+  
 
 
+}
+h1:hover {
+    color: #c02f07;
+    scale: 1.2;
 }
 .main{
     width: 90%;
@@ -28,16 +35,17 @@ h1{
     border-top: 2px dotted;
 }
 
-main>h1::after{
+h1::before{
     content: "";
     position: absolute;
     width: 100%;
     height: 25%;
     left: 0;
     bottom: 10px;
-    background-color: #fec260;
+    background-color: #f79a42;
+    opacity: 0.4;
     transition: all 0.1s;
-    z-index: -1;
+    z-index: 0;
 }
 .bookmark button{
     background-color: #d1512d;
@@ -50,8 +58,9 @@ main>h1::after{
     border-color: #a03315;;
 }
 
-.btn-delete{
-    background-color: rgb(244, 134, 25);
+#tableContent .btn-visit{
+    background: #9eb23b;
+    color: white;
 }
 .bookmark h2{
     color: rgba(130, 215, 12, 0.674);

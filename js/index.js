@@ -75,12 +75,12 @@ function display(){
  tableContent+=`<tr>
                     <td> ${i+1}</td>
                      <td>${bookMarksList[i].siteName}</td>              
-                    <td>     <button  class="btn bg-secondary-subtle" onclick="visit(${i})">
+                    <td>     <button  class="btn btn-visit" onclick="visit(${i})">
                       <i class="fa-solid fa-eye pe-2"></i>Visit
                     </button></td>
 
                     <td>
-                      <button  class="btn pe-2" onclick="deleteR(${i})">
+                      <button  class="btn pe-2 bg-danger text-white" onclick="deleteR(${i})">
                         <i class="fa-solid fa-trash-can"></i>
                         Delete
                       </button>
@@ -101,16 +101,15 @@ function deleteR(i){
 }
 
 function visit(i) {
-  var bookMark = {
-    siteName : siteNameInput.value , 
-    siteUrl : siteUrlInput.value ,
 
-  }
-  var userURL = bookMark.siteUrl;
-  var httpsRegex = /^https:\/\/*$/;
-if(httpsRegex.test(userURL)==true){
+ 
+  var httpsRegex = /^https:/;
+
+if(httpsRegex.test(bookMarksList[i].siteUrl)==true){
+
 window.open(bookMarksList[i].siteUrl);}
 else{
+
   open(`https://`+`${bookMarksList[i].siteUrl}`);
 }
 
